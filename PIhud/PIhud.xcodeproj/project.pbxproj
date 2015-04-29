@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8482F9AE1AF1319900D07B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9AD1AF1319900D07B85 /* AppDelegate.swift */; };
-		8482F9B01AF1319900D07B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9AF1AF1319900D07B85 /* ViewController.swift */; };
 		8482F9B31AF1319900D07B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9B11AF1319900D07B85 /* Main.storyboard */; };
 		8482F9B51AF1319900D07B85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9B41AF1319900D07B85 /* Images.xcassets */; };
 		8482F9B81AF1319900D07B85 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9B61AF1319900D07B85 /* LaunchScreen.xib */; };
 		8482F9C41AF1319900D07B85 /* PIhudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9C31AF1319900D07B85 /* PIhudTests.swift */; };
+		8482F9D21AF132FD00D07B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9CF1AF132FD00D07B85 /* AppDelegate.swift */; };
+		8482F9D31AF132FD00D07B85 /* pattern.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9D01AF132FD00D07B85 /* pattern.gif */; };
+		8482F9D41AF132FD00D07B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9D11AF132FD00D07B85 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +29,15 @@
 /* Begin PBXFileReference section */
 		8482F9A81AF1319900D07B85 /* PIhud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PIhud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8482F9AC1AF1319900D07B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8482F9AD1AF1319900D07B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8482F9AF1AF1319900D07B85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8482F9B21AF1319900D07B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8482F9B41AF1319900D07B85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8482F9B71AF1319900D07B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8482F9BD1AF1319900D07B85 /* PIhudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PIhudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8482F9C21AF1319900D07B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8482F9C31AF1319900D07B85 /* PIhudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIhudTests.swift; sourceTree = "<group>"; };
+		8482F9CF1AF132FD00D07B85 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DEMO/AppDelegate.swift; sourceTree = "<group>"; };
+		8482F9D01AF132FD00D07B85 /* pattern.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pattern.gif; path = DEMO/pattern.gif; sourceTree = "<group>"; };
+		8482F9D11AF132FD00D07B85 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = DEMO/ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,7 @@
 		8482F9AA1AF1319900D07B85 /* PIhud */ = {
 			isa = PBXGroup;
 			children = (
-				8482F9AD1AF1319900D07B85 /* AppDelegate.swift */,
-				8482F9AF1AF1319900D07B85 /* ViewController.swift */,
+				8482F9D51AF1330700D07B85 /* Demo */,
 				8482F9B11AF1319900D07B85 /* Main.storyboard */,
 				8482F9B41AF1319900D07B85 /* Images.xcassets */,
 				8482F9B61AF1319900D07B85 /* LaunchScreen.xib */,
@@ -110,6 +111,16 @@
 				8482F9C21AF1319900D07B85 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8482F9D51AF1330700D07B85 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				8482F9CF1AF132FD00D07B85 /* AppDelegate.swift */,
+				8482F9D11AF132FD00D07B85 /* ViewController.swift */,
+				8482F9D01AF132FD00D07B85 /* pattern.gif */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8482F9B31AF1319900D07B85 /* Main.storyboard in Resources */,
+				8482F9D31AF132FD00D07B85 /* pattern.gif in Resources */,
 				8482F9B81AF1319900D07B85 /* LaunchScreen.xib in Resources */,
 				8482F9B51AF1319900D07B85 /* Images.xcassets in Resources */,
 			);
@@ -212,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8482F9B01AF1319900D07B85 /* ViewController.swift in Sources */,
-				8482F9AE1AF1319900D07B85 /* AppDelegate.swift in Sources */,
+				8482F9D41AF132FD00D07B85 /* ViewController.swift in Sources */,
+				8482F9D21AF132FD00D07B85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +352,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PIhud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PIhud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

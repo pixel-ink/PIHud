@@ -3,7 +3,7 @@
 //  PIhud
 //
 //  Created by yoshiki on 2015/04/30.
-//  Copyright (c) 2015年 pixel-ink. All rights reserved.
+//  Copyright (c) 2015 pixel-ink. All rights reserved.
 //
 
 import UIKit
