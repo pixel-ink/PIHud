@@ -24,7 +24,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     pihud = PIHud(target:view)
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "pattern.gif")!)
+    view.backgroundColor = UIColor(patternImage: UIImage(named: "pattern.png")!)
     super.viewDidLoad()
   }
 
