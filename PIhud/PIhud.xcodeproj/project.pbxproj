@@ -14,6 +14,8 @@
 		8482F9D21AF132FD00D07B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9CF1AF132FD00D07B85 /* AppDelegate.swift */; };
 		8482F9D31AF132FD00D07B85 /* pattern.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9D01AF132FD00D07B85 /* pattern.gif */; };
 		8482F9D41AF132FD00D07B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9D11AF132FD00D07B85 /* ViewController.swift */; };
+		8482F9D91AF1442000D07B85 /* PIHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9D81AF1442000D07B85 /* PIHud.swift */; };
+		8482F9DB1AF1630300D07B85 /* pict.png in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9DA1AF1630300D07B85 /* pict.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		8482F9CF1AF132FD00D07B85 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DEMO/AppDelegate.swift; sourceTree = "<group>"; };
 		8482F9D01AF132FD00D07B85 /* pattern.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pattern.gif; path = DEMO/pattern.gif; sourceTree = "<group>"; };
 		8482F9D11AF132FD00D07B85 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = DEMO/ViewController.swift; sourceTree = "<group>"; };
+		8482F9D81AF1442000D07B85 /* PIHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PIHud.swift; path = src/PIHud.swift; sourceTree = "<group>"; };
+		8482F9DA1AF1630300D07B85 /* pict.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pict.png; path = DEMO/pict.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		8482F9AA1AF1319900D07B85 /* PIhud */ = {
 			isa = PBXGroup;
 			children = (
+				8482F9D81AF1442000D07B85 /* PIHud.swift */,
 				8482F9D51AF1330700D07B85 /* Demo */,
 				8482F9B11AF1319900D07B85 /* Main.storyboard */,
 				8482F9B41AF1319900D07B85 /* Images.xcassets */,
@@ -119,6 +124,7 @@
 				8482F9CF1AF132FD00D07B85 /* AppDelegate.swift */,
 				8482F9D11AF132FD00D07B85 /* ViewController.swift */,
 				8482F9D01AF132FD00D07B85 /* pattern.gif */,
+				8482F9DA1AF1630300D07B85 /* pict.png */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8482F9B31AF1319900D07B85 /* Main.storyboard in Resources */,
+				8482F9DB1AF1630300D07B85 /* pict.png in Resources */,
 				8482F9D31AF132FD00D07B85 /* pattern.gif in Resources */,
 				8482F9B81AF1319900D07B85 /* LaunchScreen.xib in Resources */,
 				8482F9B51AF1319900D07B85 /* Images.xcassets in Resources */,
@@ -226,6 +233,7 @@
 			files = (
 				8482F9D41AF132FD00D07B85 /* ViewController.swift in Sources */,
 				8482F9D21AF132FD00D07B85 /* AppDelegate.swift in Sources */,
+				8482F9D91AF1442000D07B85 /* PIHud.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
