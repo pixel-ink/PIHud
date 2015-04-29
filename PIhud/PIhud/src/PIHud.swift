@@ -9,6 +9,7 @@
 import UIKit
 
 private extension UIView {
+  var size: CGSize { return self.frame.size }
   var x: CGFloat { return self.frame.origin.x }
   var y: CGFloat { return self.frame.origin.y }
   var w: CGFloat { return self.frame.size.width }
@@ -81,19 +82,19 @@ private class PIHudAnime {
 
 private class PIHudImage {
   
-  private class func center(aspect:CGSize, bound:CGSize) -> CGRect {
+  class func center(aspect:CGSize, bound:CGSize) -> CGRect {
     let x = (bound.w - aspect.w) / 2
     let y = (bound.h - aspect.h) / 2
     return CGRectMake(x, y, aspect.w, aspect.h)
   }
   
-  private class func aspectFit(aspect:CGSize, bound:CGSize) -> CGRect {
+  class func aspectFit(aspect:CGSize, bound:CGSize) -> CGRect {
     let scale = min(bound.w / aspect.w, bound.h / aspect.h)
     let size = CGSizeMake(aspect.w * scale, aspect.h * scale)
     return center(size, bound:bound)
   }
   
-  private class func aspectFill(aspect:CGSize, bound:CGSize) -> CGRect {
+  class func aspectFill(aspect:CGSize, bound:CGSize) -> CGRect {
     let w = bound.w / aspect.w
     let h = bound.h / aspect.h
     var out = bound
@@ -136,7 +137,7 @@ class PIHud {
   }
   
   func hud(pict:UIImage, text:NSString) {
-    hud.frame = center(PIHudConfig.shared.hudSize)
+    hud.frame = PIHudImage.center(PIHudConfig.shared.hudSize, bound: target.size)
     hud.backgroundColor = PIHudConfig.shared.backgroundColor
     hud.image = PIHudImage.hudImage(pict, text: text)
     PIHudAnime.start({
@@ -148,10 +149,6 @@ class PIHud {
           self?.hud.alpha = 0.0
           })
     }
-  }
-  
-  private func center(size:CGSize) -> CGRect {
-    return CGRectMake((target.w - size.w) / 2, (target.h - size.h) / 2, size.w, size.h)
   }
   
 }
