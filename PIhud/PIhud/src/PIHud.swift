@@ -106,6 +106,16 @@ private class PIHudImage {
     return center(out, bound: bound)
   }
   
+  class func aspectFit(aspect:CGSize, bound:CGRect) -> CGRect {
+    let s = PIHudImage.aspectFit(aspect, bound: bound.size)
+    return CGRectMake(bound.x / 2 + s.x, bound.y / 2 + s.y, s.w, s.h)
+  }
+  
+  class func aspectFill(aspect:CGSize, bound:CGRect) -> CGRect {
+    let s = PIHudImage.aspectFill(aspect, bound: bound.size)
+    return CGRectMake(bound.x / 2 + s.x, bound.y / 2 + s.y, s.w, s.h)
+  }
+
   class func hudImage(pict:UIImage, text:NSString) -> UIImage {
     let size = PIHudConfig.shared.hudSize
     let attr = [
@@ -113,10 +123,10 @@ private class PIHudImage {
       NSForegroundColorAttributeName: PIHudConfig.shared.tintColor
     ]
     let padding = PIHudConfig.shared.cornerRadius
-    
+    let fontHeight = text.sizeWithAttributes(attr).h
     UIGraphicsBeginImageContext(PIHudConfig.shared.hudSize)
-    pict.drawInRect(aspectFill(pict.size, bound:CGSizeMake(size.w, size.h * 3 / 4)))
-    text.drawInRect(CGRectMake(padding, size.h * 3 / 4, size.w - padding * 2, size.h / 4), withAttributes: attr)
+    pict.drawInRect(aspectFit(pict.size, bound:CGRectMake(padding, padding, size.w - padding, size.h - fontHeight - padding)))
+    text.drawInRect(CGRectMake(padding, size.h - fontHeight - padding, size.w - padding, fontHeight), withAttributes: attr)
     let out = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext()
     return out
