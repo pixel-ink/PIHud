@@ -1,10 +1,4 @@
-//
-//  PIHud.swift
-//  PIhud
-//
-//  Created by yoshiki on 2015/04/30.
-//  Copyright (c) 2015 pixel-ink. All rights reserved.
-//
+// https://github.com/pixel-ink/PIhud
 
 import UIKit
 
