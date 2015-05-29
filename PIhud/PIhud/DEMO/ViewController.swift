@@ -9,6 +9,7 @@ class ViewController: UIViewController {
   }
 
   @IBAction func toast(sender: AnyObject) {
+    pihud.toast("hello world")
   }
 
   @IBAction func progress(sender: AnyObject) {
