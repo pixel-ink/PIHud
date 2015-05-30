@@ -4,7 +4,7 @@ import UIKit
 
 internal class PIHudAnime {
   
-  internal class func anime(delay:Bool, animations:() -> Void, completion:() -> Void) {
+  class func anime(delay:Bool, animations:() -> Void, completion:() -> Void) {
     UIView.animateWithDuration(
       PIHudConfig.shared.speed,
       delay: delay ? PIHudConfig.shared.delay : 0.0,
