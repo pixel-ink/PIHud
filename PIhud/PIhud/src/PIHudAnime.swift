@@ -17,16 +17,8 @@ internal class PIHudAnime {
     )
   }
   
-  class func start(animations:()->Void) {
-    PIHudAnime.anime(false, animations: animations, completion: {})
-  }
-  
   class func start(animations:()->Void, completion:() -> Void) {
     PIHudAnime.anime(false, animations: animations, completion: completion)
-  }
-  
-  class func delay(animations:()->Void) {
-    PIHudAnime.anime(true, animations: animations, completion: {})
   }
   
   class func delay(animations:()->Void, completion:() -> Void) {
