@@ -19,7 +19,7 @@
 		8482F9D91AF1442000D07B85 /* PIHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482F9D81AF1442000D07B85 /* PIHud.swift */; };
 		8482F9DB1AF1630300D07B85 /* pict.png in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9DA1AF1630300D07B85 /* pict.png */; };
 		8482F9DD1AF16B2100D07B85 /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9DC1AF16B2100D07B85 /* pattern.png */; };
-		849CBDE51B1A38FC0091031B /* PIHudQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBDE41B1A38FC0091031B /* PIHudQueue.swift */; };
+		849CBDE71B1A3A630091031B /* PIHudQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBDE61B1A3A630091031B /* PIHudQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 		8482F9D81AF1442000D07B85 /* PIHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PIHud.swift; path = src/PIHud.swift; sourceTree = "<group>"; };
 		8482F9DA1AF1630300D07B85 /* pict.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pict.png; path = DEMO/pict.png; sourceTree = "<group>"; };
 		8482F9DC1AF16B2100D07B85 /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pattern.png; path = DEMO/pattern.png; sourceTree = "<group>"; };
-		849CBDE41B1A38FC0091031B /* PIHudQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIHudQueue.swift; sourceTree = "<group>"; };
+		849CBDE61B1A3A630091031B /* PIHudQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PIHudQueue.swift; path = src/PIHudQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				8482F9D81AF1442000D07B85 /* PIHud.swift */,
-				849CBDE41B1A38FC0091031B /* PIHudQueue.swift */,
+				849CBDE61B1A3A630091031B /* PIHudQueue.swift */,
 				845C66A21B17588F00EF3C6E /* PIHudAnime.swift */,
 				845C66A31B17588F00EF3C6E /* PIHudImage.swift */,
 				845C66A41B17588F00EF3C6E /* PIHudInternalExtension.swift */,
@@ -249,7 +249,7 @@
 				845C66A51B17588F00EF3C6E /* PIHudAnime.swift in Sources */,
 				8482F9D91AF1442000D07B85 /* PIHud.swift in Sources */,
 				845C66A61B17588F00EF3C6E /* PIHudImage.swift in Sources */,
-				849CBDE51B1A38FC0091031B /* PIHudQueue.swift in Sources */,
+				849CBDE71B1A3A630091031B /* PIHudQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
