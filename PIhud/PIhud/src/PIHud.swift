@@ -52,6 +52,16 @@ class PIHud {
     PIHudQueue.toast.add(op)
   }
   
+  func progressStart(pict:UIImage, text:String) {
+    let op = progressStartOperation(pict, text: text)
+    PIHudQueue.hud.add(op)
+  }
+  
+  func progressEnd() {
+    let op = progressEndOperation()
+    PIHudQueue.hud.add(op)
+  }
+  
   func hudOperation(pict:UIImage, text:String ) -> ( (final:()->()) -> () ) {
     return {
       [weak self] final in
@@ -67,6 +77,36 @@ class PIHud {
               s.hud.alpha = 0.0
               }){final()}
         }
+      } else {
+        final()
+      }
+    }
+  }
+  
+  func progressStartOperation(pict:UIImage, text:String ) -> ( (final:()->()) -> () ) {
+    return {
+      [weak self] final in
+      if let s = self {
+        s.hud.frame = PIHudImage.center(PIHudConfig.shared.hudSize, bound: s.target.size ?? CGSizeZero)
+        s.hud.backgroundColor = PIHudConfig.shared.backgroundColor
+        s.hud.image = PIHudImage.hudImage(pict, text: text)
+        s.hud.layer.cornerRadius = PIHudConfig.shared.cornerRadius
+        PIHudAnime.start({
+          s.hud.alpha = 1.0
+          }){final()}
+      } else {
+        final()
+      }
+    }
+  }
+
+  func progressEndOperation() -> ( (final:()->()) -> () ) {
+    return {
+      [weak self] final in
+      if let s = self {
+        PIHudAnime.start({
+          s.hud.alpha = 0.0
+          }){final()}
       } else {
         final()
       }
