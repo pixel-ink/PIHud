@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "PIHud"
   s.version      = "0.1.2"
-  s.summary      = "Ripple Effect for iOS (swift)"
+  s.summary      = "HUD / Toast for iOS (swift)"
   s.homepage     = "https://github.com/pixel-ink/PIhud"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "pixelink" => "https://github.com/pixel-ink" }
