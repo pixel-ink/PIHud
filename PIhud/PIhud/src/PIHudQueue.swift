@@ -17,8 +17,7 @@ internal class PIHudQueue {
       dispatch_semaphore_wait(self.semaphore,DISPATCH_TIME_FOREVER)
       dispatch_async(dispatch_get_main_queue()){
         if self.queue.count > 0 {
-          let op = self.queue[0]
-          let a = self.queue.removeAtIndex(0)
+          let op = self.queue.removeAtIndex(0)
           op(){
             dispatch_semaphore_signal(self.semaphore)
             self.step()
