@@ -4,7 +4,7 @@ import UIKit
 
 class PIHud {
 
-  class Config {
+  struct Config {
     var speed = 0.3
     var delay = 1.5
     var cornerRadius = CGFloat(15.0)
@@ -16,11 +16,11 @@ class PIHud {
   }
   
   private let config: Config
-  private let target:UIView
-  private let hud:UIView
-  private let hudIcon:UIImageView
-  private let hudMessage:UILabel
-  private let toast:UILabel
+  private let target: UIView
+  private let hud: UIView
+  private let hudIcon: UIImageView
+  private let hudMessage: UILabel
+  private let toast: UILabel
   
   init(target:UIView) {
     self.target = target
@@ -93,6 +93,7 @@ class PIHud {
         s.hudIcon.image = pict
         s.hudMessage.text = text
         s.hudLayout(true)
+        s.hudIcon.layer.removeAllAnimations()
         s.start({
           s.hud.alpha = 1.0
           }){
@@ -117,6 +118,7 @@ class PIHud {
         s.hudIcon.image = pict
         s.hudMessage.text = text
         s.hudLayout(true)
+        s.hudIcon.layer.addAnimation(s.spin(), forKey: "spin")
         s.start({
           s.hud.alpha = 1.0
           }){final()}
@@ -132,7 +134,10 @@ class PIHud {
       if let s = self {
         s.start({
           s.hud.alpha = 0.0
-          }){final()}
+          }){
+            s.hudIcon.layer.removeAllAnimations()
+            final()
+        }
       } else {
         final()
       }
@@ -163,6 +168,18 @@ class PIHud {
         }
       } else {final()}
     }
+  }
+  
+  //animation
+  
+  func spin() -> CABasicAnimation {
+    let spin = CABasicAnimation(keyPath: "transform.rotation")
+    spin.repeatCount = MAXFLOAT
+    spin.duration = 1.0
+    spin.toValue = M_PI / 2.0
+    spin.cumulative = true
+    spin.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+    return spin
   }
   
   func start(animations:()->Void, completion:() -> Void) {
