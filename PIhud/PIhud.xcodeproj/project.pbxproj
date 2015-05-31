@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845C66A51B17588F00EF3C6E /* PIHudAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C66A21B17588F00EF3C6E /* PIHudAnime.swift */; };
-		845C66A61B17588F00EF3C6E /* PIHudImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C66A31B17588F00EF3C6E /* PIHudImage.swift */; };
 		845C66A71B17588F00EF3C6E /* PIHudInternalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C66A41B17588F00EF3C6E /* PIHudInternalExtension.swift */; };
 		8482F9B31AF1319900D07B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9B11AF1319900D07B85 /* Main.storyboard */; };
 		8482F9B51AF1319900D07B85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8482F9B41AF1319900D07B85 /* Images.xcassets */; };
@@ -33,8 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		845C66A21B17588F00EF3C6E /* PIHudAnime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PIHudAnime.swift; path = src/PIHudAnime.swift; sourceTree = "<group>"; };
-		845C66A31B17588F00EF3C6E /* PIHudImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PIHudImage.swift; path = src/PIHudImage.swift; sourceTree = "<group>"; };
 		845C66A41B17588F00EF3C6E /* PIHudInternalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PIHudInternalExtension.swift; path = src/PIHudInternalExtension.swift; sourceTree = "<group>"; };
 		8482F9A81AF1319900D07B85 /* PIhud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PIhud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8482F9AC1AF1319900D07B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,8 +89,6 @@
 			children = (
 				8482F9D81AF1442000D07B85 /* PIHud.swift */,
 				849CBDE61B1A3A630091031B /* PIHudQueue.swift */,
-				845C66A21B17588F00EF3C6E /* PIHudAnime.swift */,
-				845C66A31B17588F00EF3C6E /* PIHudImage.swift */,
 				845C66A41B17588F00EF3C6E /* PIHudInternalExtension.swift */,
 				8482F9D51AF1330700D07B85 /* Demo */,
 				8482F9B11AF1319900D07B85 /* Main.storyboard */,
@@ -246,9 +240,7 @@
 				8482F9D41AF132FD00D07B85 /* ViewController.swift in Sources */,
 				845C66A71B17588F00EF3C6E /* PIHudInternalExtension.swift in Sources */,
 				8482F9D21AF132FD00D07B85 /* AppDelegate.swift in Sources */,
-				845C66A51B17588F00EF3C6E /* PIHudAnime.swift in Sources */,
 				8482F9D91AF1442000D07B85 /* PIHud.swift in Sources */,
-				845C66A61B17588F00EF3C6E /* PIHudImage.swift in Sources */,
 				849CBDE71B1A3A630091031B /* PIHudQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
