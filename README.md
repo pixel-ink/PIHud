@@ -1,7 +1,4 @@
 
-# working
-
-
 # PIhud
 ## HUD / Toast by swift
 
@@ -16,7 +13,7 @@
 - manually
   - add PIHud**.swift into your project
 - cocoapods
-  - add " pod 'PIHud', '0.1.2' " into your Podfile
+  - add " pod 'PIHud', '0.1.3' " into your Podfile
   - add " import PIHud " into your code
 
 # basic usage
