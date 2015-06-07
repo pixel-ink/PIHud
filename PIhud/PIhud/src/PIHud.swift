@@ -45,22 +45,32 @@ class PIHud {
     target.addSubview(toast)
     
   }
-  
+
+  func hud(pict:UIImage) {
+    let op = hudOperation(pict, text: nil)
+    PIHudQueue.hud.add(op)
+  }
+
   func hud(pict:UIImage, text:String) {
     let op = hudOperation(pict, text: text)
     PIHudQueue.hud.add(op)
   }
-
+  
   func toast(text:String) {
     let op = toastOperation(text)
     PIHudQueue.toast.add(op)
   }
   
+  func progressStart(pict:UIImage) {
+    let op = progressStartOperation(pict, text: nil)
+    PIHudQueue.hud.add(op)
+  }
+
   func progressStart(pict:UIImage, text:String) {
     let op = progressStartOperation(pict, text: text)
     PIHudQueue.hud.add(op)
   }
-  
+
   func progressEnd() {
     let op = progressEndOperation()
     PIHudQueue.hud.add(op)
@@ -82,7 +92,7 @@ class PIHud {
     }
   }
   
-  func hudOperation(pict:UIImage, text:String ) -> ( (final:()->()) -> () ) {
+  func hudOperation(pict:UIImage, text:String?) -> ( (final:()->()) -> () ) {
     return {
       [weak self] final in
       if let s = self {
@@ -91,8 +101,8 @@ class PIHud {
         s.hud.backgroundColor = s.config.backgroundColor
         s.hud.layer.cornerRadius = s.config.cornerRadius
         s.hudIcon.image = pict
-        s.hudMessage.text = text
-        s.hudLayout(true)
+        s.hudMessage.text = text ?? ""
+        s.hudLayout(text != nil)
         s.hudIcon.layer.removeAllAnimations()
         s.start({
           s.hud.alpha = 1.0
@@ -107,7 +117,7 @@ class PIHud {
     }
   }
   
-  func progressStartOperation(pict:UIImage, text:String ) -> ( (final:()->()) -> () ) {
+  func progressStartOperation(pict:UIImage, text:String? ) -> ( (final:()->()) -> () ) {
     return {
       [weak self] final in
       if let s = self {
@@ -116,8 +126,8 @@ class PIHud {
         s.hud.backgroundColor = s.config.backgroundColor
         s.hud.layer.cornerRadius = s.config.cornerRadius
         s.hudIcon.image = pict
-        s.hudMessage.text = text
-        s.hudLayout(true)
+        s.hudMessage.text = text ?? ""
+        s.hudLayout(text != nil)
         s.hudIcon.layer.addAnimation(s.spin(), forKey: "spin")
         s.start({
           s.hud.alpha = 1.0

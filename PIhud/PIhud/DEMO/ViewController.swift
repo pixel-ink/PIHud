@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   }
 
   @IBAction func progress(sender: AnyObject) {
-    pihud.progressStart( UIImage(named: "pict.png")!, text:"hello")
+    pihud.progressStart( UIImage(named: "pict.png")!)
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
       [weak self] in
       if let s = self {
