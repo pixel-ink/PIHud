@@ -1,5 +1,5 @@
 
-# PIhud
+# PIHud
 ## HUD / Toast by swift
 
 ![](https://cocoapod-badges.herokuapp.com/l/PIHud/badge.png)
